@@ -20,4 +20,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."        # Semua file di repo
           target: "/var/www/landing-page" #  Target folder di VPS
+          use_insecure_cipher: true
           strip_components: 0

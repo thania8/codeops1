@@ -1,0 +1,23 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches:
+      - main  # Ganti ke master jika branch utama lo master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "."      # Semua file di repo
+          target: "/var/www/landing-page" # Target folder di VPS
+          strip_components: 0

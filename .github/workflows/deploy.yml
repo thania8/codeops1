@@ -18,6 +18,6 @@ jobs:
           host: ${{ secrets.SSh_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "."        # Semua file di repo
+          source: "."       # Semua file di repo
           target: "/var/www/landing-page" # Target folder di VPS
           strip_components: 0

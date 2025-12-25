@@ -2,48 +2,136 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Our Team | Skyhawk Dynamics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyhawk Team | Professional Experts</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .team-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .team-card:hover {
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-10px);
+        }
+        .skill-tag {
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="p-6 bg-white shadow-sm flex justify-between items-center">
-        <a href="../index.html" class="text-blue-600 font-bold">← Back to Home</a>
-        <h1 class="text-xl font-bold">Skyhawk Team</h1>
+<body class="bg-[#020617] text-slate-200">
+
+    <nav class="p-6 flex justify-between items-center border-b border-white/5">
+        <a href="../index.html" class="text-blue-400 hover:text-blue-300 transition-all font-medium">← Back to Home</a>
+        <div class="text-xs font-bold text-blue-400 uppercase tracking-widest">Skyhawk Experts</div>
     </nav>
 
     <section class="max-w-7xl mx-auto py-20 px-6">
-        <h2 class="text-4xl font-extrabold text-center mb-16">Meet Our Experts</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-blue-600 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 font-bold mb-6">NB</div>
-                <h3 class="text-xl font-bold">Nathania Belva Zerlina</h3>
-                <p class="text-slate-500">Chief Executive Officer</p>
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-extrabold text-white mb-4">The <span class="text-blue-500">A-Team.</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto italic">"Turning complex algorithms into sky-high solutions."</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/thania.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Nathania Belva Zerlina</h3>
+                <p class="text-blue-400 text-sm mb-4">Chief Executive Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">Strategy</span><span class="skill-tag">Leadership</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-slate-300 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 font-bold mb-6">BG</div>
-                <h3 class="text-xl font-bold">Muhamad Bili Gunawan</h3>
-                <p class="text-slate-500">Chief Technology Officer</p>
+
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/bili.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Muhamad Bili Gunawan</h3>
+                <p class="text-indigo-400 text-sm mb-4">Chief Technology Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">Cloud</span><span class="skill-tag">Architecture</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-slate-300 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 font-bold mb-6">FZ</div>
-                <h3 class="text-xl font-bold">Fatimah Az Zakiyah</h3>
-                <p class="text-slate-500">Chief Operating Officer</p>
+
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/arra.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Fatimah Az Zakiyah</h3>
+                <p class="text-purple-400 text-sm mb-4">Chief Operating Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">Management</span><span class="skill-tag">Operations</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-slate-300 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 font-bold mb-6">HY</div>
-                <h3 class="text-xl font-bold">Haikal Pilar Yudhistira</h3>
-                <p class="text-slate-500">Chief Product Officer</p>
+
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/haikal.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Haikal Pilar Yudhistira</h3>
+                <p class="text-cyan-400 text-sm mb-4">Chief Product Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">UX Design</span><span class="skill-tag">UAV Systems</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-slate-300 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 font-bold mb-6">MS</div>
-                <h3 class="text-xl font-bold">Misbahul Anam Sidiq</h3>
-                <p class="text-slate-500">Chief Marketing Officer</p>
+
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/misbah2.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Misbahul Anam Sidiq</h3>
+                <p class="text-emerald-400 text-sm mb-4">Chief Marketing Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">Branding</span><span class="skill-tag">Analytics</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-b-4 border-slate-300 hover:-translate-y-2 transition-all">
-                <div class="w-20 h-20 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 font-bold mb-6">AK</div>
-                <h3 class="text-xl font-bold">Muhammad Aqwam Kamil</h3>
-                <p class="text-slate-500">Chief Creative Officer</p>
+
+            <div class="team-card p-8 rounded-[2.5rem] text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                    <img src="../assets/images/akwam.jpg" class="w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl">
+                </div>
+                <h3 class="text-xl font-bold text-white">Muhammad Aqwam Kamil</h3>
+                <p class="text-rose-400 text-sm mb-4">Chief Creative Officer</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">Visual Arts</span><span class="skill-tag">Design</span>
+                </div>
+                <div class="flex justify-center gap-3">
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-blue-600 transition-all text-[10px]">IN</button>
+                    <button class="w-8 h-8 rounded-lg bg-white/5 hover:bg-sky-500 transition-all text-[10px]">X</button>
+                </div>
             </div>
+
         </div>
     </section>
 </body>

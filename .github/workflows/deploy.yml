@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."        # Semua file di repo
-          target: "/var/www/landing-page" # Target folder di VPS
+          target: "/var/www/landing-page" #  Target folder di VPS
           strip_components: 0

@@ -6,16 +6,39 @@
   <title>Skyhawk Dynamics | Future-Ready Technology</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Animasi melayang untuk drone */
     @keyframes float {
       0% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-20px) rotate(2deg); }
       100% { transform: translateY(0px) rotate(0deg); }
     }
     .animate-float { animation: float 5s ease-in-out infinite; }
+    
+    /* Scroll halus saat klik menu */
     html { scroll-behavior: smooth; }
+
+    /* --- KODE BARU UNTUK EFEK GLASS & GRADIENT --- */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .text-gradient {
+        background: linear-gradient(to right, #60a5fa, #22d3ee, #60a5fa);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s linear infinite;
+    }
+    
+    @keyframes shine {
+        to { background-position: 200% center; }
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+
 <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex items-center space-x-2">
@@ -23,9 +46,9 @@
       <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-600">Skyhawk Dynamics</h1>
     </div>
     <div class="space-x-1 hidden md:flex items-center">
-      <a href="pages/about.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">About</a>
-      <a href="pages/services.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">Services</a>
-      <a href="pages/team.html" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">Team</a>
+      <a href="#about" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">About</a>
+      <a href="#services" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">Services</a>
+      <a href="#team" class="px-4 py-2 rounded-full text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">Team</a>
       <a href="pages/Join the future.html" class="ml-4 bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all text-sm">Join the Future</a>
     </div>
   </div>
@@ -55,87 +78,48 @@
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="py-20 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-    
-    <div class="grid md:grid-cols-3 gap-6 mb-6">
-      <div class="md:col-span-1 bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm flex flex-col justify-center">
-        <span class="text-blue-600 font-bold tracking-widest uppercase text-xs mb-4">Who We Are</span>
-        <h3 class="text-3xl font-black text-slate-900 mb-6">Skyhawk Dynamics</h3>
-        <p class="text-slate-500 leading-relaxed">
-          Penyedia solusi UAV hardware & digital cloud untuk infrastruktur dan mission-critical operasional.
-        </p>
+<section id="about" class="py-32 bg-[#020617] text-white relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px]"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div>
+          <div class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-blue-500/10 text-blue-400 border border-blue-400/30 rounded-full">
+              Our Identity
+          </div>
+
+          <h2 class="text-6xl font-extrabold mb-8 leading-tight tracking-tight">
+              Pioneering the <br>
+              <span class="text-gradient">Future.</span>
+          </h2>
+          
+          <p class="text-slate-400 text-xl leading-relaxed mb-10 max-w-lg">
+              Skyhawk Dynamics hadir untuk mendisrupsi cara industri bekerja. Kami menggabungkan kecanggihan <span class="text-blue-400 font-semibold italic">Autonomous Drone</span> dengan kekuatan <span class="text-blue-400 font-semibold italic">Real-time Data</span>.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="glass-panel p-6 rounded-3xl hover:bg-white/5 transition-all group border border-white/10">
+                  <div class="text-3xl mb-4">🚀</div>
+                  <h4 class="font-bold text-lg text-white mb-2">Mission</h4>
+                  <p class="text-slate-400 text-xs leading-relaxed">Mendefinisikan ulang efisiensi operasional melalui automasi robotik yang cerdas.</p>
+              </div>
+
+              <div class="glass-panel p-6 rounded-3xl hover:bg-white/5 transition-all group border border-white/10">
+                  <div class="text-3xl mb-4">🌏</div>
+                  <h4 class="font-bold text-lg text-white mb-2">Vision</h4>
+                  <p class="text-slate-400 text-xs leading-relaxed">Menjadi poros utama ekosistem UAV dan integrasi data Cloud di tingkat global.</p>
+              </div>
+          </div>
       </div>
 
-      <div class="bg-slate-900 text-white p-10 rounded-[2.5rem] shadow-xl shadow-blue-900/10 relative overflow-hidden group">
-        <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">👁️</div>
-        <h4 class="text-xl font-bold mb-3">Our Vision</h4>
-        <p class="text-slate-400 text-sm leading-relaxed">Menjadi penyedia solusi UAV terdepan di Asia yang dikenal karena keandalan dan inovasi tanpa henti.</p>
+      <div class="relative hidden md:block animate-float">
+          <div class="absolute inset-0 bg-blue-500/10 blur-[120px] rounded-full"></div>
+          <img src="https://illustrations.popsy.co/white/abstract-art-4.svg" 
+               class="relative z-10 w-full scale-110 drop-shadow-2xl" 
+               alt="Future Tech Illustration">
       </div>
-
-      <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm group hover:border-blue-500 transition-all">
-        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">🚀</div>
-        <h4 class="text-xl font-bold text-slate-900 mb-3">Our Mission</h4>
-        <p class="text-slate-500 text-sm leading-relaxed">Automasi bisnis yang efisien, scalable, dan adaptasi cloud technology yang mulus.</p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      
-      <div class="md:col-span-1 space-y-4">
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex items-center gap-4 group hover:bg-blue-600 transition-all">
-          <div class="text-2xl group-hover:scale-110 transition-transform">✨</div>
-          <span class="font-bold text-slate-800 group-hover:text-white">Innovation First</span>
-        </div>
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex items-center gap-4 group hover:bg-blue-600 transition-all">
-          <div class="text-2xl group-hover:scale-110 transition-transform">🛡️</div>
-          <span class="font-bold text-slate-800 group-hover:text-white">Reliability</span>
-        </div>
-        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex items-center gap-4 group hover:bg-blue-600 transition-all">
-          <div class="text-2xl group-hover:scale-110 transition-transform">⚡</div>
-          <span class="font-bold text-slate-800 group-hover:text-white">Efficiency</span>
-        </div>
-      </div>
-
-      <div id="services" class="md:col-span-2 bg-[#020617] rounded-[3rem] p-10 md:p-12 relative overflow-hidden text-white shadow-2xl">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px]"></div>
-        
-        <div class="flex justify-between items-end mb-12">
-          <div>
-            <h3 class="text-4xl font-black mb-2">Our <span class="text-blue-500">Services.</span></h3>
-            <p class="text-slate-400">Future-Ready Capabilities</p>
-          </div>
-          <a href="pages/services.html" class="text-blue-400 hover:text-white transition-colors text-sm font-bold tracking-widest uppercase italic">View All →</a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all">
-            <div class="text-blue-500 mb-3 text-2xl">☁️</div>
-            <h5 class="font-bold mb-2">Cloud & DevOps</h5>
-            <p class="text-xs text-slate-400">Infrastruktur scalable 24/7.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all">
-            <div class="text-indigo-400 mb-3 text-2xl">📱</div>
-            <h5 class="font-bold mb-2">Smart Platform</h5>
-            <p class="text-xs text-slate-400">Web & Mobile App Dashboard.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all">
-            <div class="text-cyan-400 mb-3 text-2xl">🤖</div>
-            <h5 class="font-bold mb-2">UAV Automation</h5>
-            <p class="text-xs text-slate-400">Autonomous drone control.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all">
-            <div class="text-blue-400 mb-3 text-2xl">⚡</div>
-            <h5 class="font-bold mb-2">Workflow</h5>
-            <p class="text-xs text-slate-400">Business efficiency solutions.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
-
 <!-- ================= VISION & MISSION ================= -->
 <section class="pb-32 bg-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">

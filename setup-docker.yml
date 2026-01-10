@@ -1,0 +1,19 @@
+---
+- name: Setup Docker di VPS Skyhawk
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update sistem
+      apt:
+        update_cache: yes
+
+    - name: Install Docker.io
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Pastikan Docker Aktif
+      service:
+        name: docker
+        state: started
+        enabled: yes
